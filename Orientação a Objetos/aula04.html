@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+    <script>
+        // Declarando uma classe
+        class Animal {
+            constructor(especie) {
+                this.especie = especie;
+            }
+
+            // Na programação orientada a objetos uma função é chamada de MÉTODO
+            printEspecie() {
+                return this.especie;
+            }
+        }
+
+        // A classe Pet herda todos os atributos/métodos da classe Animal
+        class Pet extends Animal {
+            constructor(especie, nome, idade, raca) {
+                super(especie);
+                this.nome = nome;
+                this.idade = idade;
+                this.raca = raca;
+            }
+
+            printNome() {
+                return this.nome;
+            }
+        }
+
+        pet1 = new Pet("Canis familiaris", "Sushi", 2, "Shih-tzu")
+        alert(pet1.printEspecie())
+
+
+    </script>
+</body>
+</html>

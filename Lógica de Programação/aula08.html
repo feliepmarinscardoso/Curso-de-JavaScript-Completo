@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach - Como usar?</title>
+</head>
+<body>
+    <script>
+        // Método "manual"
+        var nome = ["Felipe", "Guilherme", "João"]
+        for(var i = 0; i < nome.length; i++) {
+            console.log(nome[i]);
+        }
+
+        // ForEach
+        nome.forEach(function(value, index){
+            console.log(value);
+        })
+    </script>
+</body>
+</html>

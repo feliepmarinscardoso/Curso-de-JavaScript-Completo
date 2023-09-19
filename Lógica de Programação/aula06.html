@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais sobre funções</title>
+</head>
+<body>
+    <script>
+        // Outras maneiras de declarar uma função
+        var nomeDaFuncao = function() {
+            console.log("Olá, mundo!")
+        }
+        nomeDaFuncao();
+
+        // Declarando uma função e chamando ela logo em seguida
+        (function(nome, idade) {
+            console.log(`O meu nome é ${nome} e tenho ${idade} anos.`);
+        })("Felipe", 20);
+    </script>
+</body>
+</html>

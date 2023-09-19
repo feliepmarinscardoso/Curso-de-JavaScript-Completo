@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções e instâncias</title>
+</head>
+<body>
+    <script>
+        function Pessoa(nome) {
+            this.nome = nome;
+        }
+        var pessoa1 = new Pessoa("Felipe");
+        console.log(pessoa1.nome);
+
+        pessoa1.nome = "Guilherme";
+        console.log(pessoa1.nome);
+    </script>
+</body>
+</html>

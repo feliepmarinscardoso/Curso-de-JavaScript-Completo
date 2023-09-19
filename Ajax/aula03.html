@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - Lista de filmes</title>
+    <style>
+        .tituloFilme {
+            cursor: pointer;
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .description {
+            display: none;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+
+    <script>
+        fetch('https://api.themoviedb.org/3/movie/popular?api_key=506fadb0256c13349acc05dabebf9604&language=en-US&page=1', {
+            method:'GET'
+        })
+        .then(response => response.json())
+        .then(function(json) {
+            var container = document.querySelector('.container');
+
+           json.results.map(function(val) {
+                container.innerHTML+=`
+                
+                   <div class="tituloFilme">`+val.title+`
+                    <div class="description">`+val.overview+`</div>
+                    <hr>
+                
+                </div>`;
+           })
+
+            var titulos  = document.querySelectorAll('.tituloFilme');
+            for(var i = 0; i < titulos.length; i++) {
+                titulos[i].addEventListener('click', function(t) {
+                    if(t.target.querySelector('.description').style.display == "none") {
+                     t.target.querySelector('.description').style.display = "block";
+                    }
+                    else {
+                        t.target.querySelector('.description').style.display = "none";
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+</html>

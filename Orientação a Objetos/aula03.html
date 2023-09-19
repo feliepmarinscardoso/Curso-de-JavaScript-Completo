@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando orientação a objetos</title>
+</head>
+<body>
+    <script>
+        function Pessoa(nome, idade, profissao) {
+            this.nome = nome;
+            this.idade = idade;
+            this.profissao = profissao;   
+            this.returnPet = function(pet) {
+                return pet;
+            }    
+        } 
+
+        function Pet(nome, raca) {
+            this.nome = nome;
+            this.raca = raca;
+        }
+
+        var pessoa1 = new Pessoa("Felipe", 20, "Programador")
+        var pet1 = new Pet("Sushi", "Shih-tzu")
+        var pet2 = new Pet("Coca", "Rottweiler")
+
+        console.log(pessoa1.returnPet(pet2).nome);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', sans-serif;
+    width: 100%;
+}
+
+body h1 {
+    font-size: 48px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.vencedor {
+    text-align: center;
+    padding-bottom: 20px;   
+}
+
+body hr {
+    border: solid 2px;
+}
+
+.align {
+    display: flex;
+}
+
+.player-options img {
+    cursor: pointer;
+}
+
+.player-options img, .enemy-options img {
+    max-width: 150px;
+    opacity: 0.3;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.player-options, .enemy-options {
+    width: 50%;
+}

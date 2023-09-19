@@ -1,0 +1,29 @@
+!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructure</title>
+    <!--https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment-->
+</head>
+<body>
+    <script>
+        const nomes = ["Felipe", "Guilherme", "João Pedro"]
+
+        const [a, b, c] = nomes 
+
+        console.log(nomes[0])
+        console.log(a)
+        console.log("=======================")
+
+        const livros = ["It: A Coisa", "Trocas Macaras", "A Metade Sombria", "Billy Summers", "O Homem Invisível"]
+        const [d, e, ...f] = livros
+
+        console.log(d)
+        console.log(e)
+        console.log(f)
+    </script>
+</body>
+</html>

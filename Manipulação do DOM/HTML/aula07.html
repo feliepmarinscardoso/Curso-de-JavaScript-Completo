@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - Criando slider com vanilla JS</title>
+    <style>
+        .container{
+            position: relative;
+            height:500px;
+        }
+        
+        .container img{
+            position: absolute;
+            left:0;
+            top:0;
+            width: 500px;
+            height: 500px;
+            opacity: 0;
+            transition:1s;
+        }
+
+        .bullets{
+            text-align: center;
+        }
+
+        .bullet-single{
+            margin:0 8px;
+            cursor: pointer;
+            display: inline-block;
+            width:20px;
+            height:20px;
+            border-radius:10px;
+            background-color: gray;
+        }
+
+        .active-bullet{
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img style="opacity: 1;" src="https://i.pinimg.com/564x/13/24/69/132469da6c0f0bf56e5ab1a9d18ad3b1.jpg" alt="">
+        <img src="https://i.pinimg.com/564x/e5/2f/de/e52fdef39c6c84d7c3eeeb17249034a5.jpg" alt="">
+        <img src="https://i.pinimg.com/564x/8e/d7/a2/8ed7a2b99e464967e9fa2375cf983707.jpg" alt="">
+    </div>
+
+    <div class="bullets">
+        <div class="bullet-single active-bullet"></div>
+        <div class="bullet-single"></div>
+        <div class="bullet-single"></div>
+    </div>
+</body>
+<script src="../JS/aula07.js"></script>
+</html>
